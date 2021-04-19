@@ -32,13 +32,13 @@
         voluptatum odio, repudiandae doloribus, ab ipsa libero tempora ipsum nihil omnis maiores.
       </p>
     </main>
-    <footer>
-      <ul id="menu">
-        <li class="item"><a href="#">Home</a></li>
-        <li class="item"><a href="about.php">About</a></li>
-      </ul>
-    </footer>
   </div>
+  <footer>
+    <ul id="menu">
+      <li class="item"><a href="#">Home</a></li>
+      <li class="item"><a href="about.php">About</a></li>
+    </ul>
+  </footer>
 </body>
 
 </html>
