@@ -1,0 +1,136 @@
+/***********
+** GLOBAL **
+************/
+
+:root {
+  --primary: #ff0000;
+  --secondary: #028571;
+  --midtone: #808080;
+  --lighttone: #b3b3b3;
+  --light: #e5e5e5;
+  --dark: #000000;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  background: var(--light);
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  padding: 0 4rem;
+  min-height: 100vh;
+  font-smooth: auto;
+}
+
+.container {
+  width: 55vw;
+  margin: 0 auto;
+}
+
+#menu {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#menu * {
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#menu *:hover {
+  color: var(--dark);
+}
+
+#menu *:active {
+  color: var(--secondary);
+}
+
+#menu > li > :not([href*=".php"]) {
+  color: var(--lighttone);
+  cursor: default;
+}
+
+.item * {
+  text-decoration: none;
+  margin-left: -2.5rem;
+  margin-right: 5rem;
+  color: var(--midtone);
+}
+
+/**************
+ *** HEADER ***
+***************/
+
+hr {
+  color: var(--primary);
+  margin-bottom: 6rem;
+}
+
+/************
+ *** MAIN ***
+*************/
+
+main {
+  padding: 0 0 10rem 0;
+}
+
+form > * {
+  border-radius: 0.2rem;
+  border-style: none;
+  height: 3rem;
+  font-size: 1rem;
+  padding-left: 0.5rem;
+}
+
+button {
+  margin: 3rem 1rem 3rem 0;
+  background-color: var(--midtone);
+  color: var(--light);
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--light);
+  color: var(--midtone);
+}
+
+button:active {
+  color: var(--secondary);
+}
+
+#btn_res {
+  color: var(--midtone);
+  background-color: var(--light);
+}
+
+#btn_res:hover {
+  color: var(--light);
+  background-color: var(--midtone);
+}
+
+#btn_res:active {
+  color: var(--primary);
+}
+
+/************
+ ** FOOTER **
+*************/
+
+footer {
+  background: var(--light);
+  position: fixed;
+  bottom: 0;
+  width: 120vh;
+  z-index: 10;
+}
