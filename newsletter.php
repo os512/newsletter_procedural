@@ -45,13 +45,17 @@ include_once "./inc/db.inc.init.php";
           <th>Vorname</th>
           <th>Nachname</th>
           <th>E-Mail</th>
+          <th>bearbeiten</th>
+          <th>löschen</th>
           </tr>
          ";
           while ($row = mysqli_fetch_assoc($result)) {
             echo "<tr>";
-            echo "<td>" . htmlspecialchars($row['vorname']) . "</td>" .
+            echo "<td>" . htmlspecialchars($row['vorname']) . "</td> " .
               "<td>" . htmlspecialchars($row['nachname']) . "</td>" .
-              "<td>" . htmlspecialchars($row['email']) . "</td>";
+              "<td>" . htmlspecialchars($row['email']) . "</td>" .
+              "<td><button id='btn_edit' type='submit' name='edit'>bearbeiten</button></td>" .
+              "<td><button id='btn_delete' type='submit' name='delete'>löschen</button></td>";
             echo "</tr>";
           }
         } else {
