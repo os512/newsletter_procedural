@@ -42,6 +42,7 @@ include_once "./inc/db.inc.init.php";
         if ($result = mysqli_query($db, $sql)) {
           echo "
           <tr>
+          <th hidden>Benutzer-ID</th>
           <th>Vorname</th>
           <th>Nachname</th>
           <th>E-Mail</th>
@@ -52,7 +53,8 @@ include_once "./inc/db.inc.init.php";
          ";
           while ($row = mysqli_fetch_assoc($result)) {
             echo "<tr>";
-            echo "<td>" . htmlspecialchars($row['vorname']) . "</td> " .
+            echo "<td hidden>" . htmlspecialchars($row['user_id']) . "</td> " .
+              "<td>" . htmlspecialchars($row['vorname']) . "</td> " .
               "<td>" . htmlspecialchars($row['nachname']) . "</td>" .
               "<td>" . htmlspecialchars($row['email']) . "</td>" .
               "<td><button id='btn_edit' type='submit' name='edit'>bearbeiten</button></td>" .
