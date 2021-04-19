@@ -70,6 +70,12 @@ table {
   border-collapse: collapse;
 }
 
+table td,
+table th {
+  border: 1px solid var(--midtone);
+  padding: 1rem;
+}
+
 /**************
  *** HEADER ***
 ***************/
@@ -128,8 +134,20 @@ button:active {
   color: var(--primary);
 }
 
+#btn_edit,
+#btn_delete {
+  margin: 0;
+  border-radius: 0.2rem;
+  border-style: none;
+  font-size: 1rem;
+}
+
+#btn_delete:active {
+  color: var(--primary);
+}
+
 /************
- ** FOOTER **
+** FOOTER **
 *************/
 
 footer {

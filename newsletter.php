@@ -45,6 +45,8 @@ include_once "./inc/db.inc.init.php";
           <th>Vorname</th>
           <th>Nachname</th>
           <th>E-Mail</th>
+          <th></th>
+          <th></th>
 
           </tr>
          ";
