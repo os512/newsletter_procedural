@@ -65,13 +65,14 @@ include_once "./inc/db.inc.init.php";
       </table>
 
     </main>
+
+    <footer>
+      <ul id="menu">
+        <li class="item"><a href="main.php">Home</a></li>
+        <li class="item"><a href="about.php">About</a></li>
+      </ul>
+    </footer>
   </div>
-  <footer>
-    <ul id="menu">
-      <li class="item"><a href="main.php">Home</a></li>
-      <li class="item"><a href="about.php">About</a></li>
-    </ul>
-  </footer>
 </body>
 
 </html>

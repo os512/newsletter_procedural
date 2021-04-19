@@ -27,13 +27,13 @@
         doloribus explicabo aut.
       </p>
     </main>
+    <footer>
+      <ul id="menu">
+        <li class="item"><a href="main.php">Home</a></li>
+        <li class="item"><a href="#">About</a></li>
+      </ul>
+    </footer>
   </div>
-  <footer>
-    <ul id="menu">
-      <li class="item"><a href="main.php">Home</a></li>
-      <li class="item"><a href="#">About</a></li>
-    </ul>
-  </footer>
 </body>
 
 </html>

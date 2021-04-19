@@ -29,6 +29,7 @@ body {
 
 .container {
   width: 55vw;
+  height: 100%;
   margin: 0 auto;
 }
 
@@ -66,7 +67,6 @@ body {
 }
 
 table {
-  width: 100vw;
   border-collapse: collapse;
 }
 
@@ -135,9 +135,7 @@ button:active {
 footer {
   background: var(--light);
   position: fixed;
-  left: 0;
   bottom: 0;
-  padding: 0 0 0 9.5rem;
   width: 100%;
   z-index: 10;
 }
