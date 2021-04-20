@@ -67,12 +67,14 @@ body {
 }
 
 table {
+  margin-top: 6rem;
   border-collapse: collapse;
 }
 
 table td,
 table th {
   border: 1px solid var(--midtone);
+  text-align: left;
   padding: 1rem;
 }
 

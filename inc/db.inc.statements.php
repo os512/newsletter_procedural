@@ -66,29 +66,6 @@ if ($db) {
         echo "Bitte füllen Sie die Felder aus. <br>" . mysqli_error($db) . "<br>";
         header("Location: ../status/error_no_entry.php"); // für Status-Anzeigen der Statements —> hier auskommentieren!
     }
-
-    /******************************************************
-     *****   D A T E N S Ä T Z E   A U S L E S E N   *****
-     *****************************************************
-     *
-     * User ——>> tb_user
-     */
-
-    // $sql = "SELECT * FROM tb_user";
-
-    // if ($result = mysqli_query($db, $sql)) {
-    //     echo "<ul>";
-    //     while ($row = mysqli_fetch_assoc($result)) {
-    //         echo "<li>" . htmlspecialchars($row['vorname']) .
-    //             "<li>" . htmlspecialchars($row['nachname']) .
-    //             "<li>" . htmlspecialchars($row['email']);
-    //     }
-    //     echo "</ul>";
-    // } else {
-    //     echo "Keine Daten vorhanden!";
-    // }
-
-
     mysqli_close($db);
 } else {
     echo 'Keine Verbindung zur Datenbank! <br />';

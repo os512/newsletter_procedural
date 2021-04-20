@@ -1,6 +1,7 @@
 <?php
 
 include_once "./inc/db.inc.init.php";
+// include_once "./inc/db.inc.statements.php";
 
 ?>
 
@@ -37,28 +38,34 @@ include_once "./inc/db.inc.init.php";
 
       <table>
         <?php
+
+
+        /******************************************************
+         *****   D A T E N S Ä T Z E   A U S L E S E N   *****
+         ******************************************************/
+
         $sql = "SELECT * FROM tb_user";
 
         if ($result = mysqli_query($db, $sql)) {
           echo "
-          <tr>
-          <th hidden>Benutzer-ID</th>
-          <th>Vorname</th>
-          <th>Nachname</th>
-          <th>E-Mail</th>
-          <th></th>
-          <th></th>
-
-          </tr>
-         ";
+  <tr>
+  <th>Vorname</th>
+  <th>Nachname</th>
+  <th>E-Mail</th>
+  <th hidden>Benutzer-ID</th>
+  <th></th>
+  <th></th>
+  
+  </tr>
+  ";
           while ($row = mysqli_fetch_assoc($result)) {
             echo "<tr>";
-            echo "<td hidden>" . htmlspecialchars($row['user_id']) . "</td> " .
-              "<td>" . htmlspecialchars($row['vorname']) . "</td> " .
+            echo "<td>" . htmlspecialchars($row['vorname']) . "</td> " .
               "<td>" . htmlspecialchars($row['nachname']) . "</td>" .
               "<td>" . htmlspecialchars($row['email']) . "</td>" .
-              "<td><button id='btn_edit' type='submit' name='edit'>bearbeiten</button></td>" .
-              "<td><button id='btn_delete' type='submit' name='delete'>löschen</button></td>";
+              "<td hidden>" . htmlspecialchars($row['user_id']) . "</td> " .
+              "<td><a href='dbmods/edit.php?email=" . $row['email'] . "'>bearbeiten</a></td>" .
+              "<td><a href='dbmods/delete.php?email=" . $row['email'] . "'>löschen</a></td>";
             echo "</tr>";
           }
         } else {
@@ -69,7 +76,6 @@ include_once "./inc/db.inc.init.php";
       </table>
 
     </main>
-
     <footer>
       <ul id="menu">
         <li class="item"><a href="main.php">Home</a></li>
